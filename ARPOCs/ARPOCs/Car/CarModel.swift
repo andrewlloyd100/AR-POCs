@@ -1,7 +1,5 @@
 import SwiftUI
 
-
-
 public final class CarModel: ObservableObject {
     @Published public var carType: CarType = CarType.merc
     

@@ -48,20 +48,17 @@ struct CarARViewContainer: UIViewRepresentable {
     }
     
     private func updateCarModel(arView: ARView) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
-            arView.scene.anchors.removeAll()
-            switch type {
-            case .merc:
-                let scene = try! Merc.loadScene()
-                arView.scene.anchors.append(scene)
-                updateCarPaint(scene: scene)
-            case .ferrari:
-                let scene = try! Ferrari.loadScene()
-                arView.scene.anchors.append(scene)
-                updateCarPaint(scene: scene)
-            }
+        arView.scene.anchors.removeAll()
+        switch type {
+        case .merc:
+            let scene = try! Merc.loadScene()
+            arView.scene.anchors.append(scene)
+            updateCarPaint(scene: scene)
+        case .ferrari:
+            let scene = try! Ferrari.loadScene()
+            arView.scene.anchors.append(scene)
+            updateCarPaint(scene: scene)
         }
-        
     }
     
     private func updateCarPaint(scene: RealityKit.Entity) {
@@ -72,7 +69,6 @@ struct CarARViewContainer: UIViewRepresentable {
         }
     }
     
-   
     private func setCarPartColor(scene: RealityKit.Entity,
                           part: CarPart,
                           color: Color) {

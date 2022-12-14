@@ -1,10 +1,14 @@
 import SwiftUI
 
+
+
 public final class CarModel: ObservableObject {
-    @Published public var mercPaint: [MercPart : Color]
-    @Published public var selectedPart: String = MercPart.body.rawValue {
+    @Published public var carType: CarType = CarType.merc
+    
+    @Published public var mercPaint: [CarPart : Color]
+    @Published public var selectedPart: String = CarPart.body.rawValue {
         didSet {
-            if let part = MercPart(rawValue: selectedPart),
+            if let part = CarPart(rawValue: selectedPart),
                let color = mercPaint[part] {
                 selectedColor = color
             }
@@ -12,28 +16,27 @@ public final class CarModel: ObservableObject {
     }
     @Published public var selectedColor: Color = .blue {
         didSet {
-            if let part = MercPart(rawValue: selectedPart) {
+            if let part = CarPart(rawValue: selectedPart) {
                 mercPaint[part] = selectedColor
             }
         }
     }
     
     public init(
-        mercPaint: [MercPart : Color] = [:]
+        type: CarType = .merc,
+        mercPaint: [CarPart : Color] = [:]
     ) {
+        self.carType = type
         self.mercPaint = [.body: .blue,
-                          .numberPlate: .yellow,
-                          .frontIndicators: .orange,
+                          .exhaustPipe: .gray,
                           .windows: .white,
                           .trims: .pink,
-                          .rims: .red,
-                          .tyres: .brown,
-                          .bumper: .yellow
+                          .vents: .black,
         ]
     }
     
     public var selectedPartDisplayString: String {
-        MercPart(rawValue: selectedPart)?.displayString ?? "-"
+        CarPart(rawValue: selectedPart)?.displayString ?? "-"
     }
 }
 

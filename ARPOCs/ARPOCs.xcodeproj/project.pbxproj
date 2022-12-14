@@ -12,12 +12,14 @@
 		2330E3482943579A0056AF12 /* FruitModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2330E3472943579A0056AF12 /* FruitModel.swift */; };
 		2330E3542948902B0056AF12 /* Merc.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 2330E3532948902B0056AF12 /* Merc.usdz */; };
 		2330E358294895220056AF12 /* Merc.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 2330E357294895220056AF12 /* Merc.rcproject */; };
+		23C5B3B4294A0A3C00E098E2 /* Ferrari.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 23C5B3B3294A0A3C00E098E2 /* Ferrari.usdz */; };
+		23C5B3B6294A0B3300E098E2 /* Ferrari.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 23C5B3B5294A0B3300E098E2 /* Ferrari.rcproject */; };
 		23F9C8522942064000C0089C /* ARPOCsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C8512942064000C0089C /* ARPOCsApp.swift */; };
 		23F9C8542942064000C0089C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C8532942064000C0089C /* HomeView.swift */; };
 		23F9C8562942064100C0089C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F9C8552942064100C0089C /* Assets.xcassets */; };
 		23F9C8592942064100C0089C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F9C8582942064100C0089C /* Preview Assets.xcassets */; };
 		23F9C8632942070400C0089C /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C8622942070400C0089C /* HomeModel.swift */; };
-		23F9C8662942095B00C0089C /* MercPart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C8642942095B00C0089C /* MercPart.swift */; };
+		23F9C8662942095B00C0089C /* CarEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C8642942095B00C0089C /* CarEnums.swift */; };
 		23F9C8672942095B00C0089C /* CarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C8652942095B00C0089C /* CarView.swift */; };
 		23F9C86A2942099500C0089C /* CasePaths in Frameworks */ = {isa = PBXBuildFile; productRef = 23F9C8692942099500C0089C /* CasePaths */; };
 		23F9C87129420AF100C0089C /* IdentifiedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 23F9C87029420AF100C0089C /* IdentifiedCollections */; };
@@ -32,13 +34,15 @@
 		2330E3472943579A0056AF12 /* FruitModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitModel.swift; sourceTree = "<group>"; };
 		2330E3532948902B0056AF12 /* Merc.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Merc.usdz; sourceTree = "<group>"; };
 		2330E357294895220056AF12 /* Merc.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Merc.rcproject; sourceTree = "<group>"; };
+		23C5B3B3294A0A3C00E098E2 /* Ferrari.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Ferrari.usdz; sourceTree = "<group>"; };
+		23C5B3B5294A0B3300E098E2 /* Ferrari.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Ferrari.rcproject; sourceTree = "<group>"; };
 		23F9C84E2942064000C0089C /* ARPOCs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARPOCs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F9C8512942064000C0089C /* ARPOCsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPOCsApp.swift; sourceTree = "<group>"; };
 		23F9C8532942064000C0089C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		23F9C8552942064100C0089C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23F9C8582942064100C0089C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		23F9C8622942070400C0089C /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
-		23F9C8642942095B00C0089C /* MercPart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MercPart.swift; sourceTree = "<group>"; };
+		23F9C8642942095B00C0089C /* CarEnums.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarEnums.swift; sourceTree = "<group>"; };
 		23F9C8652942095B00C0089C /* CarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarView.swift; sourceTree = "<group>"; };
 		23F9C87529423A3600C0089C /* FruitView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitView.swift; sourceTree = "<group>"; };
 		23F9C87629423A3600C0089C /* Fruit.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Fruit.rcproject; sourceTree = "<group>"; };
@@ -100,9 +104,11 @@
 			children = (
 				2330E357294895220056AF12 /* Merc.rcproject */,
 				2330E3532948902B0056AF12 /* Merc.usdz */,
+				23C5B3B5294A0B3300E098E2 /* Ferrari.rcproject */,
+				23C5B3B3294A0A3C00E098E2 /* Ferrari.usdz */,
 				2330E3452943575C0056AF12 /* CarModel.swift */,
 				23F9C8652942095B00C0089C /* CarView.swift */,
-				23F9C8642942095B00C0089C /* MercPart.swift */,
+				23F9C8642942095B00C0089C /* CarEnums.swift */,
 				2330E3432943573F0056AF12 /* UIColor+Random.swift */,
 			);
 			path = Car;
@@ -198,6 +204,7 @@
 				2330E3542948902B0056AF12 /* Merc.usdz in Resources */,
 				23F9C8592942064100C0089C /* Preview Assets.xcassets in Resources */,
 				23F9C8562942064100C0089C /* Assets.xcassets in Resources */,
+				23C5B3B4294A0A3C00E098E2 /* Ferrari.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,8 +223,9 @@
 				2330E3442943573F0056AF12 /* UIColor+Random.swift in Sources */,
 				2330E3482943579A0056AF12 /* FruitModel.swift in Sources */,
 				2330E3462943575C0056AF12 /* CarModel.swift in Sources */,
-				23F9C8662942095B00C0089C /* MercPart.swift in Sources */,
+				23F9C8662942095B00C0089C /* CarEnums.swift in Sources */,
 				23F9C87829423A3700C0089C /* Fruit.rcproject in Sources */,
+				23C5B3B6294A0B3300E098E2 /* Ferrari.rcproject in Sources */,
 				23F9C87729423A3700C0089C /* FruitView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

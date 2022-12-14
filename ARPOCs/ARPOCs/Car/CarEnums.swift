@@ -1,6 +1,11 @@
 import Foundation
 
-public enum MercPart: String, CaseIterable {
+public enum CarType: String, Equatable, CaseIterable {
+    case merc = "Merc"
+    case ferrari = "Ferrari"
+}
+
+public enum CarPart: String, CaseIterable {
     case frontIndicators = "FrontIndicators"
     case numberPlate = "NumberPlate"
     case innerHeadlights = "InnerHeadlights"
@@ -20,7 +25,7 @@ public enum MercPart: String, CaseIterable {
     case tyres = "Tyres"
 }
 
-extension MercPart {
+extension CarPart {
     
     var displayString: String {
         switch self {

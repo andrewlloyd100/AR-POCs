@@ -157,6 +157,13 @@
                             "typeName" : "String",
                             "value" : "grapes"
                           }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
+                          }
                         ]
                       ]
                     },
@@ -233,6 +240,13 @@
                             "typeName" : "String",
                             "value" : "banana"
                           }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
+                          }
                         ]
                       ]
                     },
@@ -308,6 +322,13 @@
                           {
                             "typeName" : "String",
                             "value" : "lemon"
+                          }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
                           }
                         ]
                       ]
@@ -399,6 +420,13 @@
                             "typeName" : "String",
                             "value" : "plate"
                           }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
+                          }
                         ]
                       ]
                     },
@@ -475,6 +503,13 @@
                           {
                             "typeName" : "String",
                             "value" : "peach"
+                          }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
                           }
                         ]
                       ]

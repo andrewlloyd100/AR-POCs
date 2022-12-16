@@ -7,7 +7,7 @@ struct FruitView : View {
     
     var body: some View {
         VStack {
-            FruitARViewContainer(model: model).edgesIgnoringSafeArea(.all)
+            FruitARViewContainer(model: model)
             VStack {
                 Toggle(isOn: $model.banana) {
                     Text("Banana")
@@ -42,6 +42,12 @@ struct FruitARViewContainer: UIViewRepresentable {
         
         let arView = ARView(frame: .zero)
         
+        context.coordinator.arView = arView
+        arView.session.delegate = context.coordinator
+        
+        arView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(ARCoordinator.handleTap)))
+        
+        
         // Load the "Box" scene from the "Experience" Reality File
         let boxAnchor = try! Fruit.loadScene()
         
@@ -71,6 +77,9 @@ struct FruitARViewContainer: UIViewRepresentable {
         
     }
     
+    func makeCoordinator() -> ARCoordinator {
+        ARCoordinator()
+    }
     
     func updateUIView(_ uiView: ARView, context: Context) {
         guard let scene = uiView.scene.anchors.first as? Fruit.Scene else {

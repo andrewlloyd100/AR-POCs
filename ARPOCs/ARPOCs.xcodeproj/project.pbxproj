@@ -14,6 +14,7 @@
 		2330E358294895220056AF12 /* Merc.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 2330E357294895220056AF12 /* Merc.rcproject */; };
 		23C5B3B4294A0A3C00E098E2 /* Ferrari.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 23C5B3B3294A0A3C00E098E2 /* Ferrari.usdz */; };
 		23C5B3B6294A0B3300E098E2 /* Ferrari.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 23C5B3B5294A0B3300E098E2 /* Ferrari.rcproject */; };
+		23C69199294B5FA400D38B86 /* Fruit.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 23C69198294B5FA400D38B86 /* Fruit.usdz */; };
 		23F9C8522942064000C0089C /* ARPOCsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C8512942064000C0089C /* ARPOCsApp.swift */; };
 		23F9C8542942064000C0089C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23F9C8532942064000C0089C /* HomeView.swift */; };
 		23F9C8562942064100C0089C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23F9C8552942064100C0089C /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 		2330E357294895220056AF12 /* Merc.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Merc.rcproject; sourceTree = "<group>"; };
 		23C5B3B3294A0A3C00E098E2 /* Ferrari.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Ferrari.usdz; sourceTree = "<group>"; };
 		23C5B3B5294A0B3300E098E2 /* Ferrari.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Ferrari.rcproject; sourceTree = "<group>"; };
+		23C69198294B5FA400D38B86 /* Fruit.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = Fruit.usdz; sourceTree = "<group>"; };
 		23F9C84E2942064000C0089C /* ARPOCs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARPOCs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23F9C8512942064000C0089C /* ARPOCsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARPOCsApp.swift; sourceTree = "<group>"; };
 		23F9C8532942064000C0089C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				23F9C87629423A3600C0089C /* Fruit.rcproject */,
+				23C69198294B5FA400D38B86 /* Fruit.usdz */,
 				23F9C87529423A3600C0089C /* FruitView.swift */,
 				2330E3472943579A0056AF12 /* FruitModel.swift */,
 			);
@@ -204,6 +207,7 @@
 				2330E3542948902B0056AF12 /* Merc.usdz in Resources */,
 				23F9C8592942064100C0089C /* Preview Assets.xcassets in Resources */,
 				23F9C8562942064100C0089C /* Assets.xcassets in Resources */,
+				23C69199294B5FA400D38B86 /* Fruit.usdz in Resources */,
 				23C5B3B4294A0A3C00E098E2 /* Ferrari.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

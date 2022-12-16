@@ -11,8 +11,6 @@ struct CarView : View {
         VStack {
             CarARViewContainer(type: $model.carType,
                                carPaint: $model.mercPaint)
-            .edgesIgnoringSafeArea(.all)
-            
             
             HStack {
                 Picker("Car", selection: $model.carType) {
@@ -34,6 +32,26 @@ struct CarView : View {
     }
 }
 
+class ARCoordinator: NSObject, ARSessionDelegate {
+    
+    weak var arView: ARView?
+    
+    func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
+        guard let view = self.arView else { return }
+        debugPrint("Anchors added to the scene: ", anchors)
+    }
+    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        print("tap")
+        let tapLocation = sender.location(in: arView)
+        // Get the entity at the location we've tapped, if one exists
+        if let button = arView?.entity(at: tapLocation) {
+            // For testing purposes, print the name of the tapped entity
+            print(button.name)
+        }
+    }
+}
+
 struct CarARViewContainer: UIViewRepresentable {
     @Binding var type: CarType
     @Binding var carPaint: [CarPart : Color]
@@ -43,8 +61,16 @@ struct CarARViewContainer: UIViewRepresentable {
         let arView = ARView(frame: .zero)
         updateCarModel(arView: arView)
         
-        return arView
+        context.coordinator.arView = arView
+        arView.session.delegate = context.coordinator
         
+        arView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(ARCoordinator.handleTap)))
+        
+        return arView
+    }
+
+    func makeCoordinator() -> ARCoordinator {
+        ARCoordinator()
     }
     
     private func updateCarModel(arView: ARView) {

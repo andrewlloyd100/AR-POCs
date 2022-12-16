@@ -111,6 +111,13 @@
                             "typeName" : "String",
                             "value" : "car"
                           }
+                        ],
+                        [
+                          "rigidBody-enabled",
+                          {
+                            "typeName" : "Bool",
+                            "value" : true
+                          }
                         ]
                       ]
                     },

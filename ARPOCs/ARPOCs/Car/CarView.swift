@@ -10,7 +10,10 @@ struct CarView : View {
     var body: some View {
         VStack {
             CarARViewContainer(type: $model.carType,
-                               carPaint: $model.mercPaint)
+                               carPaint: $model.mercPaint,
+                               carPartSelected: { part in
+                self.model.carPartSelected(part: part)
+            })
             
             HStack {
                 Picker("Car", selection: $model.carType) {
@@ -29,12 +32,18 @@ struct CarView : View {
             .padding()
             .frame(maxWidth: .infinity, maxHeight: 100)
         }
+        .sheet(
+            unwrapping: self.$model.destination,
+            case: /CarModel.Destination.detail
+        ) { $detail in
+            Text("Here is some information about \(detail.rawValue)")
+        }
     }
 }
 
 class ARCoordinator: NSObject, ARSessionDelegate {
-    
     weak var arView: ARView?
+    var carPartSelected: ((CarPart) -> Void)?
     
     func session(_ session: ARSession, didAdd anchors: [ARAnchor]) {
         guard let view = self.arView else { return }
@@ -44,10 +53,11 @@ class ARCoordinator: NSObject, ARSessionDelegate {
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
         print("tap")
         let tapLocation = sender.location(in: arView)
-        // Get the entity at the location we've tapped, if one exists
         if let button = arView?.entity(at: tapLocation) {
-            // For testing purposes, print the name of the tapped entity
             print(button.name)
+            if let part = CarPart(rawValue: button.name) {
+                carPartSelected?(part)
+            }
         }
     }
 }
@@ -56,12 +66,15 @@ struct CarARViewContainer: UIViewRepresentable {
     @Binding var type: CarType
     @Binding var carPaint: [CarPart : Color]
     
+    var carPartSelected: ((CarPart) -> Void)
+    
     func makeUIView(context: Context) -> ARView {
         
         let arView = ARView(frame: .zero)
         updateCarModel(arView: arView)
         
         context.coordinator.arView = arView
+        context.coordinator.carPartSelected = carPartSelected
         arView.session.delegate = context.coordinator
         
         arView.addGestureRecognizer(UITapGestureRecognizer(target: context.coordinator, action: #selector(ARCoordinator.handleTap)))
